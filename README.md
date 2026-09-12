@@ -282,6 +282,38 @@ LUFFY/
 - [ ] **luffy/verl/verl/workers/sharding_manager/megatron_vllm.py:76** - after binding to the memory buffer, we can load the checkpoint here
 - [ ] **luffy/verl/verl/workers/sharding_manager/megatron_vllm.py:253** - (sgm): this may not be true for FSDP -> vLLM
 - [ ] **luffy/verl/verl/workers/sharding_manager/megatron_vllm.py:323** - (zhangchi.usc1992) We can consider copy non-tp weight to another infer buffer.
+- [ ] **luffy/verl/verl/mix_src/mix_vllm_rollout.py:1** - support pp in vllm
+- [ ] **luffy/verl/verl/mix_src/mix_vllm_rollout.py:2** - passing tokenizer is not necessary? no encoding/decoding is happening here
+- [ ] **luffy/verl/verl/mix_src/mix_vllm_rollout.py:3** - simplify init logics
+- [ ] **luffy/verl/verl/trainer/main_ppo.py:1** - Implement reward computation for different data sources
+- [ ] **luffy/verl/verl/trainer/main_ppo.py:2** - Add support for parallel processing of reward computation
+- [ ] **luffy/verl/verl/trainer/main_ppo.py:3** - Implement proper sequence decoding and validation
+- [ ] **luffy/verl/verl/trainer/main_ppo.py:4** - Add thread-safe logging and debugging functionality
+- [ ] **luffy/verl/verl/trainer/main_ppo.py:5** - Optimize memory usage for large batch processing
+- [ ] **luffy/verl/verl/trainer/main_ppo.py:6** - Extract and validate prompt and response sequences
+- [ ] **luffy/verl/verl/trainer/main_ppo.py:7** - Decode sequences to text format
+- [ ] **luffy/verl/verl/trainer/main_ppo.py:8** - Apply appropriate reward function based on data source
+- [ ] **luffy/verl/verl/trainer/main_ppo.py:9** - Handle edge cases and error conditions
+- [ ] **luffy/verl/verl/trainer/main_ppo.py:10** - Implement batch-wise reward computation
+- [ ] **luffy/verl/verl/trainer/main_ppo.py:11** - Add proper error handling and validation
+- [ ] **luffy/verl/verl/trainer/fsdp_sft_trainer.py:1** - Add calculation of mfu
+- [ ] **luffy/verl/verl/trainer/fsdp_sft_trainer.py:2** - Add validation
+- [ ] **luffy/verl/verl/trainer/fsdp_sft_trainer.py:3** - add checkpoint manager
+- [ ] **luffy/verl/verl/trainer/fsdp_sft_trainer.py:4** - support pretrain from random weights
+- [ ] **luffy/verl/verl/trainer/fsdp_sft_trainer.py:5** - support init directly from sharded weights
+- [ ] **luffy/verl/verl/trainer/fsdp_sft_trainer.py:6** - Implement model loading with proper initialization context
+- [ ] **luffy/verl/verl/trainer/fsdp_sft_trainer.py:7** - Add support for different model types and configurations
+- [ ] **luffy/verl/verl/trainer/fsdp_sft_trainer.py:8** - Implement memory-efficient model loading for large models
+- [ ] **luffy/verl/verl/trainer/fsdp_sft_trainer.py:9** - Add model validation and compatibility checks
+- [ ] **luffy/verl/verl/trainer/fsdp_sft_trainer.py:10** - Complete model loading implementation
+- [ ] **luffy/verl/verl/trainer/fsdp_sft_trainer.py:11** - Add support for custom model architectures
+- [ ] **luffy/verl/verl/trainer/fsdp_sft_trainer.py:12** - Implement proper dtype and attention configuration
+- [ ] **luffy/verl/verl/trainer/fsdp_sft_trainer.py:13** - Implement gradient checkpointing configuration
+- [ ] **luffy/verl/verl/trainer/fsdp_sft_trainer.py:14** - Add memory usage optimization strategies
+- [ ] **luffy/verl/verl/trainer/fsdp_sft_trainer.py:15** - Configure mixed precision training settings
+- [ ] **luffy/verl/verl/trainer/fsdp_sft_trainer.py:16** - Implement FSDP sharding and wrapping policies
+- [ ] **luffy/verl/verl/trainer/fsdp_sft_trainer.py:17** - Add CPU offloading configuration for memory optimization
+- [ ] **luffy/verl/verl/trainer/fsdp_sft_trainer.py:18** - Set up distributed training parameters properly
 
 ## 🤝 Contributing
 
